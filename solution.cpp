@@ -41,6 +41,10 @@ ll solve(ll n)
 	ll ans[2][2] = {{1,1},{1,0}};
   	if (n == 0)
     	return 0;
+    if (n == 1)
+    	return 2;
+    if (n == 2)
+    	return 3;
   	power(ans, n-2);
   	return (ans[0][0]*3+ans[0][1]*2)%MOD;
 }
